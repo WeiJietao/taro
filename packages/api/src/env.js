@@ -6,7 +6,8 @@ export const ENV_TYPE = {
   ALIPAY: 'ALIPAY',
   TT: 'TT',
   QQ: 'QQ',
-  JD: 'JD'
+  JD: 'JD',
+  XHS: 'XHS'
 }
 
 export function getEnv () {
@@ -26,6 +27,8 @@ export function getEnv () {
     return ENV_TYPE.WEB
   } else if (process.env.TARO_ENV === 'rn') {
     return ENV_TYPE.RN
+  } else if (process.env.TARO_ENV === 'xhs') {
+    return ENV_TYPE.XHS
   } else {
     return process.env.TARO_ENV || 'Unknown'
   }

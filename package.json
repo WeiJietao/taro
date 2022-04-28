@@ -27,22 +27,6 @@
     "version:changelog": "conventional-changelog -p angular",
     "clear-all": "rimraf node_modules && lerna clean -y"
   },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.{json}": [
-      "prettier --write",
-      "git add -f"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS --config commitlint.config.js",
-      "pre-commit": "lint-staged"
-    }
-  },
   "workspaces": [
     "packages/*"
   ],
